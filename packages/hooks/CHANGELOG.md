@@ -1,5 +1,11 @@
 # @web3-ui/hooks
 
+## 0.5.1
+
+### Patch Changes
+
+- [#146](https://github.com/Developer-DAO/web3-ui/pull/146) [`169021d`](https://github.com/Developer-DAO/web3-ui/commit/169021df19ebc7819f68d74213dc74380d8a71d6) Thanks [@Dhaiwat10](https://github.com/Dhaiwat10)! - Wait for tx to be confirmed inside `useTransaction`
+
 ## 0.5.0
 
 ### Minor Changes
