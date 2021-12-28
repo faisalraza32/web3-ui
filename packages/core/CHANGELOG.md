@@ -1,5 +1,27 @@
 # @web3-ui/core
 
+## 0.2.0
+
+### Minor Changes
+
+- [#166](https://github.com/Developer-DAO/web3-ui/pull/166) [`1a33c80`](https://github.com/Developer-DAO/web3-ui/commit/1a33c8097a2608e029336301a0082e1d240b65df) Thanks [@Dhaiwat10](https://github.com/Dhaiwat10)! - Export all the hooks from the core package too
+
+### Patch Changes
+
+- Updated dependencies [[`f0c96df`](https://github.com/Developer-DAO/web3-ui/commit/f0c96df7468fbe0993b8e90979407c27ba7a22bd), [`01ce580`](https://github.com/Developer-DAO/web3-ui/commit/01ce5809debb2284545620861d11893e4f9675f0), [`184ec43`](https://github.com/Developer-DAO/web3-ui/commit/184ec43e0542a0057f7847a9c696eb0479f96438)]:
+  - @web3-ui/components@0.4.0
+  - @web3-ui/hooks@0.6.0
+
+## 0.1.4
+
+### Patch Changes
+
+- [#149](https://github.com/Developer-DAO/web3-ui/pull/149) [`4c2056d`](https://github.com/Developer-DAO/web3-ui/commit/4c2056d9c8b2c1eebdd7135a5581447941a65ad8) Thanks [@JoviDeCroock](https://github.com/JoviDeCroock)! - Remove the `cross-fetch` polyfill
+
+- Updated dependencies [[`4c2056d`](https://github.com/Developer-DAO/web3-ui/commit/4c2056d9c8b2c1eebdd7135a5581447941a65ad8), [`169021d`](https://github.com/Developer-DAO/web3-ui/commit/169021df19ebc7819f68d74213dc74380d8a71d6), [`e611ef9`](https://github.com/Developer-DAO/web3-ui/commit/e611ef9860ac0179e3c3dcfc64f05aac3b88baa7)]:
+  - @web3-ui/components@0.3.1
+  - @web3-ui/hooks@0.5.1
+
 ## 0.1.3
 
 ### Patch Changes

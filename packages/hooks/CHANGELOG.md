@@ -1,5 +1,19 @@
 # @web3-ui/hooks
 
+## 0.6.0
+
+### Minor Changes
+
+- [#163](https://github.com/Developer-DAO/web3-ui/pull/163) [`01ce580`](https://github.com/Developer-DAO/web3-ui/commit/01ce5809debb2284545620861d11893e4f9675f0) Thanks [@Dhaiwat10](https://github.com/Dhaiwat10)! - Add missing exports
+
+## 0.5.1
+
+### Patch Changes
+
+- [#146](https://github.com/Developer-DAO/web3-ui/pull/146) [`169021d`](https://github.com/Developer-DAO/web3-ui/commit/169021df19ebc7819f68d74213dc74380d8a71d6) Thanks [@Dhaiwat10](https://github.com/Dhaiwat10)! - Wait for tx to be confirmed inside `useTransaction`
+
+* [#155](https://github.com/Developer-DAO/web3-ui/pull/155) [`e611ef9`](https://github.com/Developer-DAO/web3-ui/commit/e611ef9860ac0179e3c3dcfc64f05aac3b88baa7) Thanks [@Dhaiwat10](https://github.com/Dhaiwat10)! - Fix issues related to accountChange and networkChange
+
 ## 0.5.0
 
 ### Minor Changes

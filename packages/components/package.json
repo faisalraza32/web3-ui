@@ -1,7 +1,7 @@
 {
   "name": "@web3-ui/components",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "private": false,
   "engines": {
     "node": ">=16.0.0",
@@ -21,7 +21,7 @@
     "build": "preconstruct build",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,js,jsx}\"",
     "format:check": "prettier --list-different \"src/**/*.{ts,tsx,json,js,jsx}\"",
-    "prepublishOnly": "yarn build && cp ../../LICENSE ./LICENSE && cp ../../README.md ./README.md"
+    "prepublishOnly": "yarn build && cp ../../LICENSE ./LICENSE"
   },
   "main": "dist/web3-ui-components.cjs.js",
   "module": "dist/web3-ui-components.esm.js",
@@ -53,7 +53,7 @@
     "@types/ramda": "^0.27.62",
     "@types/react": "^17.0.36",
     "@types/react-dom": "^16.9.10",
-    "@web3-ui/hooks": "^0.5.0",
+    "@web3-ui/hooks": "^0.6.0",
     "babel-loader": "^8.2.1",
     "identity-obj-proxy": "^3.0.0",
     "prettier": "^2.2.0",
