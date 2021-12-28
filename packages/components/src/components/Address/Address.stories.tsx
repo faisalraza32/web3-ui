@@ -1,20 +1,21 @@
 import React from 'react';
-import { Address } from '.';
-
 import { useWallet, Provider, NETWORKS } from '@web3-ui/hooks';
-import { Button, VStack } from '@chakra-ui/react';
+import { Button, Box } from '@mui/material';
+import { Address } from '.';
 
 export default {
   title: 'Components/Address',
-  component: Address,
+  component: Address
 };
 
-export const Default = () => <Address value='testaddress.eth' />;
+export const Default = () => <Address value="testaddress.eth" />;
 
-export const DefaultShortenedWithENS = () => <Address shortened value='testaddress.eth' />;
+export const DefaultShortenedWithENS = () => (
+  <Address shortened value="testaddress.eth" />
+);
 
 export const DefaultShortenedWithHexAddress = () => (
-  <Address shortened value='0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b' />
+  <Address shortened value="0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b" />
 );
 
 type AddressProps = {
@@ -25,14 +26,20 @@ const AddressUsingProvider = (props: AddressProps) => {
   const { connected, connectWallet, connection } = useWallet();
 
   return (
-    <VStack>
+    <Box>
       <Address
         copiable
-        value={connected ? connection.ens || connection.userAddress || '' : 'Not connected'}
+        value={
+          connected
+            ? connection.ens || connection.userAddress || ''
+            : 'Not connected'
+        }
         shortened={props.shortened}
       />
-      <Button onClick={connectWallet}>Connect wallet</Button>
-    </VStack>
+      <Button variant="contained" color="primary" onClick={connectWallet}>
+        Connect wallet
+      </Button>
+    </Box>
   );
 };
 
@@ -48,4 +55,4 @@ export const WithWalletShortened = () => (
   </Provider>
 );
 
-export const CanBeCopied = () => <Address value='0x00000000000000' copiable />;
+export const CanBeCopied = () => <Address value="0x00000000000000" copiable />;

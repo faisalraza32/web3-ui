@@ -1,6 +1,7 @@
-import { Box, Flex, FormControl, FormErrorMessage, Text } from '@chakra-ui/react';
-import { CopyIcon, CheckIcon } from '@chakra-ui/icons';
 import React, { useState, useEffect } from 'react';
+import { Typography, Stack, Box } from '@mui/material';
+import { ContentCopy, Check } from '@mui/icons-material';
+import { green, grey, red } from '@mui/material/colors';
 
 export interface AddressProps {
   /**
@@ -20,7 +21,11 @@ export interface AddressProps {
 /**
  * A component to display an address
  */
-export const Address: React.FC<AddressProps> = ({ value, copiable = false, shortened = false }) => {
+export const Address: React.FC<AddressProps> = ({
+  value,
+  copiable = false,
+  shortened = false
+}) => {
   const [error, setError] = useState<null | string>(null);
   const [copied, setCopied] = useState<boolean>(false);
   let feedbackTimeOut: ReturnType<typeof setTimeout>;
@@ -56,22 +61,41 @@ export const Address: React.FC<AddressProps> = ({ value, copiable = false, short
     return () => clearTimeout(feedbackTimeOut);
   }, []);
 
+  const getIcon = () => {
+    if (copiable) {
+      return (
+        <Box ml="auto">
+          {copied ? (
+            <Check fontSize="small" sx={{ color: green[500] }} />
+          ) : (
+            <ContentCopy fontSize="small" sx={{ color: grey[300] }} />
+          )}
+        </Box>
+      );
+    }
+    return null;
+  };
   return (
-    <FormControl isInvalid={!!error}>
-      <Flex
-        data-testid='address-container'
-        alignItems='center'
-        cursor={copiable ? 'pointer' : 'initial'}
+    <>
+      <label
+        style={{ cursor: copiable ? 'pointer' : 'default' }}
         onClick={handleClick}
       >
-        <Text>{displayAddress}</Text>
-        {copiable && (
-          <Box ml='auto'>
-            {copied ? <CheckIcon color='green.500' /> : <CopyIcon color='gray.300' />}
-          </Box>
-        )}
-      </Flex>
-      <FormErrorMessage>{error}</FormErrorMessage>
-    </FormControl>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          spacing={1}
+        >
+          <Typography variant="body2" gutterBottom>
+            {displayAddress}
+          </Typography>
+          {getIcon()}
+        </Stack>
+      </label>
+      <Typography variant="body2" color={red[500]}>
+        {error}
+      </Typography>
+    </>
   );
 };
